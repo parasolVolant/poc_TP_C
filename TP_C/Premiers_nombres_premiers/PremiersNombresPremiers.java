@@ -3,11 +3,11 @@
 import java.util.ArrayList;
 import java.math.BigInteger;
 
-public class PremiersNombresPremiers {
-  static final ArrayList<Long> premiersNombresPremiers = new ArrayList<Long>() ;    
-  static final long borne = 10_000_000 ;    
+public class PremiersNombresPremiers implements Runnable {
+  static ArrayList<Long> premiersNombresPremiers = new ArrayList<Long>() ;
+  static final long borne = 4_220_000 ;
 
-  public static void main(String[] args) {
+  public void run() {
     final long début = System.nanoTime() ;
 
     for (long i = 1; i <= borne; i++) {
